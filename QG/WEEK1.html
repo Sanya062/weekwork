@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ch-zn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font/iconfont.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .header {
+            width: 100%;
+            background-color: rgb(51, 51, 51);
+            height: 40px;
+        }
+
+        .head_nav {
+            width: 1226px;
+            height: 40px;
+            margin: 0 auto;
+            background-color: rgb(51, 51, 51);
+        }
+
+        .nav_left {
+            float: left;
+            height: 40px;
+
+        }
+
+        .flex_cen {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .head_nav a {
+            text-decoration: none;
+            color: rgb(176, 176, 176);
+            font-size: 12px;
+            /* 使em高度和a高度相同 */
+        }
+
+        .head_nav a:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        .head_nav li {
+            /* display: inline-block; */
+            height: 15px;
+            padding: 0 8px;
+            border-right: 1px solid rgb(63, 66, 61);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        em {
+            font-style: normal;
+            font-size: 12px;
+        }
+
+        .nav_right {
+            float: right;
+            height: 40px;
+        }
+
+        .car {
+            margin-left: 15px;
+            float: right;
+            width: 120px;
+            height: 40px;
+            background-color: rgb(66, 66, 66);
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .car a:hover {
+            color: rgb(255, 103, 0);
+        }
+
+        .show_car {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            width: 316px;
+            height: 0px;
+            box-shadow: 0 5px 8px rgba(105, 101, 101, .4);
+            background-color: rgb(255, 255, 255);
+            display: block;
+            transition: height 0.4s ease-in-out;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .show_car em {
+            line-height: 100px;
+            visibility: hidden;
+            /* transition: visibility 9s; */
+        }
+
+        .head2 {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 100px;
+        }
+
+        .head2_box {
+            width: 1226px;
+            height: 100px;
+            background-color: rgb(255, 255, 255);
+            margin: 0 auto;
+        }
+
+        .logo {
+            float: left;
+            height: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 56px;
+            height: 56px;
+        }
+
+        .head2_right {
+            float: right;
+        }
+
+        .product {
+            float: left;
+            height: 100px;
+        }
+
+        .product li {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+
+        }
+
+        .product a {
+            color: rgb(51, 51, 51);
+            font-size: 16px;
+        }
+
+        .product em {
+            font-size: 16px;
+        }
+
+        .src {
+            height: 100px;
+            float: right;
+            margin-left: 72px;
+        }
+
+        .src_box {
+            width: 300px;
+            height: 45px;
+        }
+
+        input {
+            float: left;
+            width: 84%;
+            height: 45px;
+            border: 1px solid rgb(224, 224, 224);
+        }
+
+        .src_icon {
+            width: 16%;
+            height: 45px;
+            border: 1px solid rgb(224, 224, 224);
+            border-left: 0;
+        }
+
+        .section1 {
+            width: 100%;
+            height: 650px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .s1_box {
+            width: 1226px;
+            height: 650px;
+            margin: 0 auto;
+        }
+
+        .s1_top {
+            position: relative;
+            height: 460px;
+            width: 1226px;
+            background-image: url('./images/mg1.jpg');
+        }
+
+        .s1_left {
+            float: left;
+            width: 234px;
+            height: 460px;
+            background-color: rgba(105, 101, 101, .6);
+            padding: 20px 0;
+        }
+
+        .s1_left ul {
+            height: 100%;
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content: space-around;
+            /* align-items: center; */
+        }
+
+        .s1_left em {
+            font-size: 14px;
+            color: rgb(255, 255, 255);
+        }
+
+        .s1_left .iconfont {
+            font-size: 18px;
+            font-weight: 700;
+            margin-right: 18px;
+            float: right;
+            color: rgb(255, 255, 255);
+        }
+
+        .s1_cen {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 14px;
+            height: 170px;
+            width: 100%;
+
+        }
+
+        .cen1 {
+            width: 234px;
+            height: 170px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgb(95, 87, 80);
+            font-size: 12px;
+            padding: 3px;
+        }
+
+        .cen1 li {
+            width: 70px;
+            /* background-color: #fff; */
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 0 0;
+            border: 1px solid rgb(102, 94, 87);
+        }
+
+        .cen1 a {
+            color: rgb(207, 205, 203);
+            text-align: center;
+            /* 使图片和文字居中 */
+        }
+
+        .cen1 .iconfont {
+            font-size: 26px;
+        }
+
+        .cen1 em {
+            display: block;
+            /* 使文字另起1行 */
+        }
+
+        .cen2 {
+            float: right;
+            margin-left: 14px;
+            height: 170px;
+            /* width: 992px; */
+
+        }
+
+        ul {
+            display: flex;
+        }
+
+        .cen2 li {
+            margin-right: 15px;
+            flex-grow: 1;
+            /* 
+            !!!!!!!!!!!!!!!!!
+            这个决定了li标签的宽度是按1/3分配的
+            ！！！！！！！！！！
+             */
+            height: 170px;
+            transition: box-shadow 0.3s linear;
+        }
+
+        .cen2 li:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 20px rgba(142, 137, 137, .4);
+        }
+
+        .cen2 li a img {
+            display: block;
+            height: 170px;
+        }
+
+        .tri_l_box {
+            width: 41px;
+            height: 69px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            background-color: transparent;
+        }
+
+        .tri_r_box {
+            width: 41px;
+            height: 69px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            background-color: transparent;
+        }
+
+        .s1_right {
+            position: relative;
+            float: right;
+            height: 100%;
+            width: 992px;
+        }
+
+        .tri_l {
+            width: 20px;
+            height: 20px;
+            margin: 25px auto;
+            transform: rotate(-45deg);
+            border-top: 3px solid rgb(159, 156, 154);
+            border-left: 3px solid rgb(159, 156, 154);
+
+        }
+
+        .tri_r {
+            width: 20px;
+            height: 20px;
+            margin: 25px auto;
+            transform: rotate(45deg);
+            border-top: 3px solid rgb(159, 156, 154);
+            border-right: 3px solid rgb(159, 156, 154);
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="header">
+        <div class="head_nav">
+            <!-- <div class="nav_box"> -->
+
+            <ul class="nav_left flex_cen">
+                <li class="1"> <a href=""><em>小米官网</em></a></li>
+                <li class="2"> <a href=""><em>小米商城</em></a></li>
+                <li class="3"> <a href=""><em>小米澎湃OS</em></a></li>
+                <li class="4"> <a href=""><em>小米汽车</em></a></li>
+                <li class="5"> <a href=""><em>云服务</em></a></li>
+                <li class="6"> <a href=""><em>loT</em></a></li>
+                <li class="7"> <a href=""><em>有品</em></a></li>
+                <li class="8"> <a href=""><em>小爱开放平台</em></a></li>
+                <li class="9"> <a href=""><em>资质证照</em></a></li>
+                <li class="10"> <a href=""><em>协议规则</em></a></li>
+                <li class="11"> <a href=""><em>下载app</em></a></li>
+                <li class="12" style="border-right: 0px;"> <a href=""><em>Select Location</em></a></li>
+            </ul>
+            <div class="car flex_cen">
+                <a href=""><i class="iconfont"></i><em id='carColor'>购物车(0)</em></a>
+                <div class="show_car"><em id="showCarWord">购物车中还没有商品，赶紧选购吧！</em></div>
+            </div>
+            <ul class="nav_right flex_cen">
+                <li class="13"><a href=""><em>登录</em></a></li>
+                <li class="14"><a href=""><em>注册</em></a></li>
+                <li class="15" style="border-right: 0px;"><a href=""><em>消息通知</em></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="head2">
+        <div class="head2_box">
+            <div class="logo"><a href=""><img
+                        src="https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/img/logo-mi2.png" alt=""></a></div>
+            <div class="head2_right">
+                <ul class="product flex_cen">
+                    <li><a href=""><em>Xiaomi手机</em></a></li>
+                    <li><a href=""><em>REDMI手机</em></a></li>
+                    <li><a href=""><em>电视</em></a></li>
+                    <li><a href=""><em>笔记本</em></a></li>
+                    <li><a href=""><em>平板</em></a></li>
+                    <li><a href=""><em>家电</em></a></li>
+                    <li><a href=""><em>路由器</em></a></li>
+                    <li><a href=""><em>服务中心</em></a></li>
+                    <li><a href=""><em>社区</em></a></li>
+                </ul>
+                <div class="src flex_cen">
+                    <div class="src_box">
+                        <input type="text">
+                        <div class="src_icon flex_cen"><i class="iconfont icon-sousuo1"></i></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="section1">
+        <div class="s1_box">
+            <div class="s1_top">
+                <div class="s1_left">
+                    <ul>
+                        <li class="1"><em>手机</em><i class="iconfont icon-youjiantou1"></i></li>
+                        <li class="2"><em>电视</em><i class="iconfont icon-youjiantou1"></i></li>
+                        <li class="3"><em>家电</em><i class="iconfont icon-youjiantou1"></i></li>
+                        <li class="4"><em>笔记本 平板 显示器</em><i class="iconfont icon-youjiantou1"></i></li>
+                        <li class="5"><em>出行 穿戴</em><i class="iconfont icon-youjiantou1"></i></li>
+                        <li class="6"><em>耳机 音箱</em><i class="iconfont icon-youjiantou1"></i></li>
+                        <li class="7"><em>健康 儿童</em><i class="iconfont icon-youjiantou1"></i></li>
+                        <li class="8"><em>生活 箱包</em><i class="iconfont icon-youjiantou1"></i></li>
+                        <li class="9"><em>智能 路由器</em><i class="iconfont icon-youjiantou1"></i></li>
+                        <li class="10"><em>电源 配件</em><i class="iconfont icon-youjiantou1"></i></li>
+                    </ul>
+                </div>
+                <div class="s1_right">
+                    <div class="tri_l_box">
+                        <div class="tri_l"></div>
+                    </div>
+                    <div class="tri_r_box">
+                        <div class="tri_r"></div>
+                    </div>
+                    <ul class="points">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="s1_cen">
+                <ul class="cen1">
+                    <li><a href=""><i class="iconfont icon-shizhong"></i><em>保障服务</em></a></li>
+                    <li><a href=""><i class="iconfont icon-qiye"></i><em>企业团购</em></a></li>
+                    <li><a href=""><i class="iconfont icon-fma"></i><em>F码通道</em></a></li>
+                    <li><a href=""><i class="iconfont icon-SSDqia"></i><em>米粉卡</em></a></li>
+                    <li><a href=""><i class="iconfont icon-money"></i><em>以旧换新</em></a></li>
+                    <li><a href=""><i class="iconfont icon-huafeichongzhi"></i><em>话费充值</em></a></li>
+                </ul>
+                <div class="cen2">
+                    <ul>
+                        <li><a href="https://www.mi.com/shop/buy?product_id=10050081"><img
+                                    src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e981f78d2ac17c504975a719cb8b069d.png?w=632&h=340"
+                                    alt=""></a></li>
+                        <li><a href="https://www.mi.com/shop/buy?product_id=10050079"><img
+                                    src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6b04dfc206dec442fe161b33082681ec.png?w=632&h=340"
+                                    alt=""></a></li>
+                        <li style="margin-right: 0;"><a href="https://www.mi.com/shop/buy?product_id=20588"><img
+                                    src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6b0c7fadbd84a808287af5faad6e62d7.png?w=632&h=340"
+                                    alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        const car = document.querySelector('.car')
+        const showCar = document.querySelector('.show_car')
+        const carColor = document.getElementById('carColor')
+        const showCarWord = document.getElementById('showCarWord')
+        let timerId = 0
+        // 
+
+
+        car.addEventListener('mouseover', function () {
+            timerId = setInterval(function () {
+                showCarWord.style.visibility = 'visible'
+                console.log('$')
+            }, 100)
+            car.style.backgroundColor = 'rgb(255, 255, 255)';
+            showCar.style.height = '100px'
+            showCarWord.style.display = 'block'
+            carColor.style.color = 'rgb(255, 103, 0)'
+        })
+
+        car.addEventListener('mouseout', function () {
+            if (timerId)
+                clearInterval(timerId)
+            showCarWord.style.transition = 'visibility 0s';
+            showCar.style.height = '0px'
+            car.style.backgroundColor = 'rgb(66, 66, 66)'
+            showCarWord.style.visibility = 'hidden'
+            carColor.style.color = 'rgb(176, 176, 176)'
+        })
+
+    </script>
+</body>
+
+</html>
