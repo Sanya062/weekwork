@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ch-Zn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todolist.css">
+</head>
+
+<body>
+    <div class="list_box">
+        <div class="list_top"><input class="new-todo" type="text"><button class="subscribe">提交</button></div>
+        <p class="">完成状态</p>
+        <section class="main">
+            <ul class="todo-list">
+                <li class="completed">
+                    <div class="view">
+                        <input type="checkbox" class="toggle" checked>
+                        <label for="">1212313</label>
+                        <button class="destory">删除</button>
+                    </div>
+                    <input class="edit" type="text">
+                </li>
+            </ul>
+        </section>
+        <div><span>全选</span>
+            <input type="checkbox" class="toggle-all">
+        </div>
+        <button class="clear-completed">删除所有<br>已完成项目</button>
+    </div>
+    <h1>回收站</h1>
+    <ul class="recycle">
+        <li class="completed">
+            <div class="view">
+                <input type="checkbox" class="toggle" checked>
+                <label for="">1212313</label>
+                <button class="destory">复原</button>
+            </div>
+            <input class="edit" type="text">
+        </li>
+    </ul>
+    <script src="todolist.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.list_box {
+    width: 50%;
+    margin: 0 auto;
+    padding: 8px;
+    background-color: green;
+
+}
+
+.list_top {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid gray;
+}
+
+.new-todo {
+    width: 80%;
+    height: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+}
+
+.subscribe {
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    /* line-height: calc(100%); */
+}
+
+.main {
+    width: 100%;
+    background-color: yellow;
+}
+
+.todo-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.todo-list li {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    position: relative;
+    height: 40px;
+    width: 100%;
+    border: 1px solid red;
+    background-color: transparent;
+
+}
+
+.toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    width: 10%;
+    height: 25px;
+    z-index: 2;
+}
+
+.todo-list label {
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 75%;
+    height: 90%;
+    font-size: 18px;
+    background-color: yellowgreen;
+    line-height: 100%;
+    padding: 8px 10px;
+}
+
+.todo-list .destory {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    right: 20px;
+    width: 10%;
+    height: 80%
+}
+
+.todo-list .completed {
+    background-color: rgb(147, 143, 143);
+}
+
+.completed label {
+    text-decoration: line-through;
+    color: rgb(244, 236, 236);
+    background-color: rgb(211, 211, 210);
+}
+
+.edit {
+    display: none;
+}
+
+.editing .edit {
+    position: absolute;
+    left: 70px;
+    width: 75%;
+    height: 90%;
+    margin: 2px 0;
+    padding: 5px 10px;
+    outline: none;
+    font-size: 18px;
+    border: 1px solid rgb(147, 143, 143);
+    display: block;
+}
+
+.editing div {
+    display: none;
+}
+
+.clear-completed {
+    width: 90px;
+    height: 40px;
+    background-color: pink;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.clear-completed:active {
+    box-shadow: 2px 3px rgb(0, 0, 0);
+}
+
+.list_box div:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(0, 0, 0);
+    width: 80px;
+    height: 40px;
+    background-color: rgb(87, 232, 235);
+}
+
+.list_box div:nth-of-type(2) span {
+    margin-left: 3px;
+    margin-right: 5px;
+}
+
+.recycle {
+    margin: 0 auto 40px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.recycle li {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    position: relative;
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgb(83, 80, 80);
+    background-color: transparent;
+
+}
+
+.recycle .toggle {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    width: 10%;
+    height: 25px;
+    z-index: 2;
+}
+
+.recycle label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 85%;
+    height: 90%;
+    background-color: rgb(211, 211, 210);
+    line-height: 100%;
+    padding: 10px 4px;
+}
+
+.recycle .restore {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    right: 10px;
+    width: 10%;
+    height: 80%
+}
+
+.recycle .completed {
+
+    background-color: rgb(147, 143, 143);
+}
+
+.recycle .completed label {
+    text-decoration: line-through;
+    color: rgb(244, 236, 236);
+}
+
+.recycle .edit {
+    display: none;
+}
+
+.recycle .editing .edit {
+    position: absolute;
+    left: 70px;
+    width: 75%;
+    height: 80%;
+    margin: 3px 0;
+    padding: 10px 4px;
+    outline: none;
+    border: 1px solid rgb(147, 143, 143);
+    display: block;
+}
+
+.recycle .editing div {
+    display: none;
+}
+
+.recycle .clear-completed {
+    width: 90px;
+    height: 40px;
+    background-color: pink;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.recycle .clear-completed:active {
+    box-shadow: 2px 3px rgb(0, 0, 0);
+}
+
+.list_box .recycle div:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(0, 0, 0);
+    width: 80px;
+    height: 40px;
+    background-color: rgb(87, 232, 235);
+}
+
+.list_box .recycle div:nth-of-type(2) span {
+    margin-left: 3px;
+    margin-right: 5px;
+}
+
+.list_box p {
+    /* margin-left: 5px; */
+    margin: 5px 5px;
+    line-height: 40px;
+    background-color: #fff;
+    border: 1px solid #000;
+    width: 60px;
+    height: 40px;
+    font-size: 14px;
+}
+
+h1 {
+    width: 600px;
+    text-align: center;
+    margin: 10px auto 4px;
+    color: #5dfb9a;
+}
